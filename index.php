@@ -6,7 +6,7 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  
+
   <section id="banner">
     <img src="photo/banner_konkurrence2.png" alt="Konkurrence">
   </section>
@@ -16,11 +16,11 @@
 
     <form class="contact" method="post" action="resultat.php">
 
-      <span id="competimage">
+      <div id="competimage">
         <input type="file">
-      </span>
+      </div>
 
-      <span id="compeform">
+      <div id="compeform">
         <label for="powerup">PowerUp:<br></label>
         <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
@@ -35,10 +35,10 @@
 
         <input type="submit" class="myButton" name="submit" value="Deltag" />
         <span class="clearfix"></span>
-      </span>
+      </div>
     </form>
   </section>
 
-  
+
 </body>
 </html>
