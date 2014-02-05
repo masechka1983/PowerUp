@@ -5,7 +5,7 @@
 	$navn = $_POST['navn'];
 	$email = $_POST['email'];
 	$instrukser = $_POST['instrukser'];
-	$image = $_POST['']
+	$image = $_POST['image']
 
 ?>
 
@@ -32,7 +32,7 @@
 
       <span id="competimage">
       	<img src="">
-        <input type="file">
+        <input type="file" name="image">
       </span>
 
       <span id="compeform">
