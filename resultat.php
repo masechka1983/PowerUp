@@ -27,7 +27,7 @@
 
 	<section class="competition">
   
-    <form class="contact" method="post" action="bekræft.php">
+    <form class="contact" method="post" action="confirm.php">
       <div id="compeform">
         <input type="submit" class="myButton" name="submit" value="Deltag" />
         <span class="clearfix"></span>
