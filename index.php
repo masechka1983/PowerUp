@@ -16,8 +16,11 @@
 
     <form class="contact" method="post" action="resultat.php">
 
-      <div id="compeform">
+      <div id="competimage">
+        <input type="file">
+      </div>
 
+      <div id="compeform">
         <label for="powerup">PowerUp:<br></label>
         <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
