@@ -33,7 +33,7 @@
         <label for="message">Instrukser:<br></label>
         <textarea class="contact-field" id="instrukser" name="instrukser" rows="20"></textarea><br>
 
-        <input type="submit" class="myButton" name="submit" value="Deltag" />
+        <input type="submit" class="myButton" name="submit" value="Send" />
         <span class="clearfix"></span>
       </div>
     </form>

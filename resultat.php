@@ -21,30 +21,14 @@
     </section>
 
 	<h1>Hej <?php echo $navn; ?> </h1>
-	<p>Tak for deltagelse i konkurrencen.<br>
+	<p>Tak for sending os Jeres PowerUp øvelse.<br>
+	   Vil du deltage i konkurrencen, tryk på Bekræft.<br> 	
 	   Vinderen får besked fra os senest den 28. februar.</p>
 
 	<section class="competition">
   
-    <form class="contact" method="post" action="index.php">
-
-      <div id="competimage">
-        <input type="file">
-      </div>
-
+    <form class="contact" method="post" action="bekræft.php">
       <div id="compeform">
-        <label for="powerup">PowerUp:<br></label>
-        <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
-
-        <label for="name">Navn:<br></label>
-        <input class="contact-field" type="text" id="name" name="navn" value="<?php echo $navn; ?>"/><br>
-
-        <label for="email">Email:<br></label>
-        <input class="contact-field" type="text" id="email" name="email" /><br>
-
-        <label for="message">Instrukser:<br></label>
-        <textarea class="contact-field" id="instrukser" name="instrukser" rows="20"></textarea><br>
-
         <input type="submit" class="myButton" name="submit" value="Deltag" />
         <span class="clearfix"></span>
       </div>
