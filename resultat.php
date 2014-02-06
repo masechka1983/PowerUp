@@ -6,6 +6,11 @@
 	$email = $_POST['email'];
 	$instrukser = $_POST['instrukser'];
 	$image = $_POST['image']
+	$_FILES["file"]["name"]
+	$_FILES["file"]["type"] 
+	$_FILES["file"]["size"]
+	$_FILES["file"]["tmp_name"]
+	$_FILES["file"]["error"]
 
 ?>
 
@@ -30,10 +35,13 @@
   
     <form class="contact" method="post" action="index.php">
 
-      <span id="competimage">
-      	<img src="">
-        <input type="file" name="image">
-      </span>
+      <div id="competimage">
+      	<form action="upload_file.php" method="post" enctype="multipart/form-data">
+			<label for="file">Filename:</label>
+			<input type="file" name="file" id="file"><br>
+			<input type="submit" name="submit" value="Submit">
+		</form>
+      </div>
 
       <span id="compeform">
         <label for="powerup">PowerUp:<br></label>
