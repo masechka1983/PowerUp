@@ -16,15 +16,8 @@
 
     <form class="contact" method="post" action="resultat.php">
 
-      <span id="competimage">
-        <form action="resultat.php" method="post" enctype="multipart/form-data">
-          <label for="file">Filename:</label>
-          <input type="file" name="file" id="file"><br>
-          <input type="submit" name="submit" value="Submit">
-        </form>
-      </span>
+      <div id="compeform">
 
-      <span id="compeform">
         <label for="powerup">PowerUp:<br></label>
         <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
@@ -39,7 +32,7 @@
 
         <input type="submit" class="myButton" name="submit" value="Deltag" />
         <span class="clearfix"></span>
-      </span>
+      </div>
     </form>
   </section>
 
