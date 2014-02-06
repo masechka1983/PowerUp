@@ -29,6 +29,10 @@
   
     <form class="contact" method="post" action="confirm.php">
       <div id="compeform">
+      	<input type="hidden" name="powerup" value="<?php echo $powerup;?>">
+      	<input type="hidden" name="navn" value="<?php echo $navn;?>">
+      	<input type="hidden" name="email" value="<?php echo $email;?>">
+      	<input type="hidden" name="instrukser" value="<?php echo $instrukser;?>">
         <input type="submit" class="myButton" name="submit" value="Bekræft" />
         <span class="clearfix"></span>
       </div>
