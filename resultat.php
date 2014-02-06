@@ -5,12 +5,7 @@
 	$navn = $_POST['navn'];
 	$email = $_POST['email'];
 	$instrukser = $_POST['instrukser'];
-	$image = $_POST['image']
-	$_FILES["file"]["name"]
-	$_FILES["file"]["type"] 
-	$_FILES["file"]["size"]
-	$_FILES["file"]["tmp_name"]
-	$_FILES["file"]["error"]
+	$image = $_FILES["file"];
 
 ?>
 
