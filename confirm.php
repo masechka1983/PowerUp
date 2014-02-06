@@ -16,7 +16,7 @@
 //Udfør dernæst overstående SQL-sætning
 	$result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
 
-	while($row = mysqli_fetch_assos($result)){
+	while($row = mysqli_fetch_assoc($result)){
 		echo "<pre>";
 		print_r($row);
 		echo "<hr>";
