@@ -33,7 +33,7 @@
       	 <input type="file">
       </div>
 
-      <span id="compeform">
+      <div id="compeform">
         <label for="powerup">PowerUp:<br></label>
         <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
@@ -48,7 +48,7 @@
 
         <input type="submit" class="myButton" name="submit" value="Deltag" />
         <span class="clearfix"></span>
-      </span>
+      </div>
     </form>
   </section>
 
