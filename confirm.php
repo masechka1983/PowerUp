@@ -11,7 +11,7 @@
 	mysqli_set_charset($dblink, "utf8");
 
 //Først SQL-forespørslen- hent alt fra din tabel
-	$guery = "SELECT * FROM goodvertizingkonkurrencedeltagere";
+	$query = "SELECT * FROM goodvertizingkonkurrencedeltagere";
 
 //Udfør dernæst overstående SQL-sætning
 	$result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
