@@ -5,7 +5,6 @@
 	$navn = $_POST['navn'];
 	$email = $_POST['email'];
 	$instrukser = $_POST['instrukser'];
-
 ?>
 
 <!DOCTYPE html>
