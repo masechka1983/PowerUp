@@ -29,7 +29,7 @@
   
     <form class="contact" method="post" action="confirm.php">
       <div id="compeform">
-        <input type="submit" class="myButton" name="submit" value="Deltag" />
+        <input type="submit" class="myButton" name="submit" value="Bekræfts" />
         <span class="clearfix"></span>
       </div>
     </form>
