@@ -5,7 +5,7 @@
 	$navn = $_POST['navn'];
 	$email = $_POST['email'];
 	$instrukser = $_POST['instrukser'];
-
+    $image = $_FILES['imgfile']['name'];
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
     <form class="contact" method="post" action="index.php">
 
       <div id="competimage">
-      	<?php
+      	<!--?php
 		if(isset($_REQUEST['submit']))
 		{
 		  $filename=  $_FILES["imgfile"]["name"];
@@ -53,14 +53,14 @@
 		}
 		else
 		{
-		?>
+		?-->
 		<form method="post" enctype="multipart/form-data">
 			<input type="file" name="imgfile"><br>
 			<input type="submit" name="submit" value="upload">
 		</form>
-		<?php
+		<!--?php
 		}
-		?> 
+		?--> 
       </div>
 
       <div id="compeform">
