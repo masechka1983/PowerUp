@@ -37,7 +37,7 @@
         <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
         <label for="name">Navn:<br></label>
-        <input class="contact-field" type="text" id="name" name="navn" /><br>
+        <input class="contact-field" type="text" id="name" name="navn" value="<?php echo $navn; ?>"/><br>
 
         <label for="email">Email:<br></label>
         <input class="contact-field" type="text" id="email" name="email" /><br>
