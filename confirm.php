@@ -17,7 +17,7 @@
 	$result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
 
 	if($result){
-		echo "<script>top.location.href='https://www.facebook.com/pages/Power-Up/460877770705249</script>";
+		echo "<script>top.location.href='https://www.facebook.com/pages/Power-Up/460877770705249'</script>";
 	}else{
 		echo "Uuups- det er fejl i mekanismen. Prøv igen!";
 	}
