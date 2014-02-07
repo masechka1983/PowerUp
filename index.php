@@ -5,7 +5,7 @@
 
   $slutaar = '2014';
   $slutmaaned = '02';
-  $slutdag = '7';
+  $slutdag = '8';
 
   $konkurrencestatus = true;
 
@@ -22,6 +22,25 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+  <script>     
+    window.fbAsyncInit = function() {     
+      FB.init({         
+        appId      : '805803386103615', // App ID         
+        status     : true, // check login status         
+        cookie     : true, // enable cookies 
+        xfbml      : true  // parse XFBML     
+      });   
+    };  // end fbAsyncInit  
+  // Load the SDK Asynchronously 
+  (function(d){   
+    var js, id = 'facebook-jssdk'; if (d.getElementById(id)) 
+  {return;}   
+    js = d.createElement('script'); js.id = id; js.async = true;   
+    js.src = "//connect.facebook.net/en_US/all.js";   d.getElementsByTagName('head')[0].appendChild(js); 
+  }(document));
+  </script>
+
   <section id="banner">
     <img src="photo/banner_konkurrence2.png" alt="Konkurrence">
   </section>
@@ -39,6 +58,9 @@
         </div>
 
         <div id="compeform">
+          <button type="button" onclick="hentnavn()" >
+            Hent deltageroplysninger fra facebook</button>
+
           <label for="powerup">PowerUp:<br></label>
           <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
 
@@ -86,6 +108,30 @@
      }
   
     ?>
+
+  <script>
+    function hentnavn(){      
+      FB.getLoginStatus(function(response) {    
+        if (response.status === 'connected') {      
+          FB.api('/me', function(response) {      
+            document.getElementById('name').value = response.name;    
+            document.getElementById('email').value = response.email;  
+          });     
+        } else if (response.status === 'not_authorized') {      
+          FB.login(function(response) {         
+            if (response.authResponse) {          
+              FB.api('/me', function(response) {          
+                document.getElementById('name').value = response.name;  
+                document.getElementById('email').value = response.email;  
+              });             
+            } else {          
+              console.log('User cancelled login or did not authorize.');  
+            }       
+          }, {scope: 'email'});     
+        }   
+      })  // end getLoginStatus 
+    } // end hentnavn      
+</script>
 
   
   
