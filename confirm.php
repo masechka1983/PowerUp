@@ -11,7 +11,7 @@
 	mysqli_set_charset($dblink, "utf8");
 
 //Først SQL-forespørslen- hent alt fra din tabel
-	$query = "INSERT INTO goodvertizingkonkurrencedeltagere VALUES ('', '$powerup', '$navn', '$email', '$instrukser')"; 
+	$query = "INSERT INTO goodvertizingkonkurrencedeltagere VALUES ('', '', '$powerup', '$navn', '$email', '$instrukser')"; 
 
 //Udfør dernæst overstående SQL-sætning
 	$result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
