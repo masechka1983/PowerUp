@@ -157,6 +157,11 @@ form {
 	text-align: left;
 }
 
+.byline {
+	font-weight: 500;
+	font-size: 18px;
+}
+
 .billede img {
 	width: 370px;
 	
@@ -177,4 +182,6 @@ form {
 .description {
 	width: 400px;
 	display: inline-block;
+	font-weight: 200;
+	font-size: 18px;
 }

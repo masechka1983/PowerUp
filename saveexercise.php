@@ -18,7 +18,7 @@
   </script>
 
     <section>
-      <h1>Nyeste PowerUps øvelser</h1>
+      <h1 class="undertitle">Nyeste PowerUps øvelser</h1>
     <?php
     //Opretter DB-forbindelse
         $dblink = mysqli_connect("localhost","mod7af1489","2faumoj9","mod7af1489") or die ("Fejl: Kan ikke etablere forbindelse til databasen");
@@ -42,12 +42,12 @@
         <p class="billede"><img src=<?php echo $row['imageurl']; ?> alt="foto"></p> 
       </div>
 
-      <div class="left-side"
+      <div class="left-side">
         <!-- html span i hvilket der outputtes værdien fra feltet "powerupnavn"-->
         <p class="powerupname"><?php echo $row['powerupnavn']; ?></p>
 
         <!-- html span i hvilket der outputtes værdien fra feltet "navn"-->
-        <span class="byline">Af <?php echo $row['brugersnavn']; ?></span>
+        <div class="byline">Af <?php echo $row['brugersnavn']; ?></div>
 
         <!-- html paragraf i hvilket der outputtes instrukser-->
         <p class="description"><?php echo $row['instrukser']; ?></p>
