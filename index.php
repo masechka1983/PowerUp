@@ -5,7 +5,7 @@
 
   $slutaar = '2014';
   $slutmaaned = '02';
-  $slutdag = '8';
+  $slutdag = '11';
 
   $konkurrencestatus = true;
 
@@ -54,7 +54,7 @@
       <form class="contact" method="post" action="resultat.php">
 
         <div id="competimage">
-          <input type="file">
+          <input type="file" name="billedfil" id="billedfil">
         </div>
 
         <div id="compeform">
