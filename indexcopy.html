@@ -51,7 +51,7 @@
     <section class="competition">
       <h1 class="title">Opskriv dit øvelse</h1>
 
-      <form class="contact" method="post" action="confirm.php" enctype="multipart/form-data">
+      <form class="contact" method="post" action="resultat.php">
 
         <div id="competimage">
           <input type="file" name="billedfil" id="billedfil">
@@ -92,7 +92,7 @@
         mysqli_set_charset($dblink, "utf8");
 
       //Først SQL-forespørgslen- hent alt fra din tabel
-      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere WHERE id in (1, 2, 3, 4, 5)"; 
+      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere ORDER BY id DESC"; 
       //Har ændret i $query de sidste 4 ord!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 
       $result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
@@ -135,7 +135,6 @@
       })  // end getLoginStatus 
     } // end hentnavn      
 </script>
-
 
   
   

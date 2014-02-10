@@ -150,3 +150,31 @@ form {
 .clearfix {
     display: inline-block;
 }
+
+.exercise {
+	margin-top: 20px;
+	height: 295px;
+	text-align: left;
+}
+
+.billede img {
+	width: 370px;
+	
+}
+
+.left-side {
+	display: inline-block;
+	width: 420px;
+	float: right;
+}
+
+.right-side {
+	display: inline-block;
+	width: 370px;
+	height: 297px;
+}
+
+.description {
+	width: 400px;
+	display: inline-block;
+}
