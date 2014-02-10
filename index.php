@@ -58,8 +58,8 @@
         </div>
 
         <div id="compeform">
-          <button type="button" onclick="hentnavn()" >
-            Hent deltageroplysninger fra facebook</button>
+          <button class="fbbutton" type="button" onclick="hentnavn()" >
+            Hent deltageroplysninger fra facebook</button><br>
 
           <label for="powerup">PowerUp:<br></label>
           <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
@@ -73,7 +73,7 @@
           <label for="message">Instrukser:<br></label>
           <textarea class="contact-field" id="instrukser" name="instrukser" rows="20"></textarea><br>
 
-          <input type="submit" class="myButton" name="submit" value="Send" />
+          <input class="myButton" type="submit" name="submit" value="Send" />
           <span class="clearfix"></span>
         </div>
       </form>

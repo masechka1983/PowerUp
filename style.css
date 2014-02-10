@@ -151,7 +151,52 @@ form {
     display: inline-block;
 }
 
-.exercise {
+/*@media screen and (max-width: 1440px) {
+.main {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.right-side {
+	margin-left: 24%;
+	display: inline-block;
+	width: 370px;
+	height: 297px;
+}	
+
+.left-side {
+	display: inline-block;
+	width: 400px;
+	float: right;
+	text-align: left;
+	margin-right: 285px;
+}
+}
+/*.exercise {
+	margin-top: 20px;
+	height: 295px;
+	text-align: left;
+}
+
+.byline {
+	font-weight: 500;
+	font-size: 18px;
+}*/
+
+
+
+@media screen and (min-width: 600px) {
+#competimage {
+	width: 44%;
+	display: inline-block;
+	float: left;
+}
+
+.fbbutton {
+	margin-bottom: 15px;
+}
+
+.competition {
 	margin-top: 20px;
 	height: 295px;
 	text-align: left;
@@ -164,13 +209,14 @@ form {
 
 .billede img {
 	width: 370px;
-	
+	margin-left: 10px;
 }
 
 .left-side {
 	display: inline-block;
-	width: 420px;
+	width: 400px;
 	float: right;
+	text-align: left;
 }
 
 .right-side {
@@ -184,4 +230,5 @@ form {
 	display: inline-block;
 	font-weight: 200;
 	font-size: 18px;
+}
 }

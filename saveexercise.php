@@ -17,7 +17,7 @@
   }(document, 'script', 'facebook-jssdk'));
   </script>
 
-    <section>
+    <section class="main">
       <h1 class="undertitle">Nyeste PowerUps øvelser</h1>
     <?php
     //Opretter DB-forbindelse
@@ -36,31 +36,31 @@
         //While løkke - så længe der er en række (row)- opbyg array
     ?>
 
-    <article class="exercise">
-      <div class="right-side"> 
-        <!-- html paragraf i hvilket der outputtes billedet-->
-        <p class="billede"><img src=<?php echo $row['imageurl']; ?> alt="foto"></p> 
-      </div>
-
-      <div class="left-side">
-        <!-- html span i hvilket der outputtes værdien fra feltet "powerupnavn"-->
-        <p class="powerupname"><?php echo $row['powerupnavn']; ?></p>
-
-        <!-- html span i hvilket der outputtes værdien fra feltet "navn"-->
-        <div class="byline">Af <?php echo $row['brugersnavn']; ?></div>
-
-        <!-- html paragraf i hvilket der outputtes instrukser-->
-        <p class="description"><?php echo $row['instrukser']; ?></p>
-
-        <div class="fb-like" 
-             data-href="http://mod7af1489.keaweb.dk/goodvertizingpowerup/index.php?id=<?php echo $row['id']; ?>" 
-             data-layout="standard" 
-             data-action="like" 
-             data-show-faces="true" 
-             data-share="true">
+      <article class="competition">
+        <div class="right-side"> 
+          <!-- html paragraf i hvilket der outputtes billedet-->
+          <p class="billede"><img src=<?php echo $row['imageurl']; ?> alt="foto"></p> 
         </div>
-      </div>
-    </article> 
+
+        <div class="left-side">
+          <!-- html span i hvilket der outputtes værdien fra feltet "powerupnavn"-->
+          <p class="powerupname"><?php echo $row['powerupnavn']; ?></p>
+
+          <!-- html span i hvilket der outputtes værdien fra feltet "navn"-->
+          <p class="byline">Af <?php echo $row['brugersnavn']; ?></p>
+
+          <!-- html paragraf i hvilket der outputtes instrukser-->
+          <p class="description"><?php echo $row['instrukser']; ?></p>
+
+          <div class="fb-like" 
+               data-href="http://mod7af1489.keaweb.dk/goodvertizingpowerup/index.php?id=<?php echo $row['id']; ?>" 
+               data-layout="standard" 
+               data-action="like" 
+               data-show-faces="true" 
+               data-share="true">
+          </div>
+        </div>
+      </article> 
         
     <?php 
        };//slutter While løkke
