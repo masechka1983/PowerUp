@@ -5,7 +5,7 @@
 
   $slutaar = '2014';
   $slutmaaned = '02';
-  $slutdag = '14';
+  $slutdag = '28';
 
   $konkurrencestatus = true;
 
@@ -49,7 +49,9 @@
    if($konkurrencestatus){
     ?>
     <section class="competition">
-      <h1 class="title">Opskriv dit øvelse</h1>
+      <h1 class="title">Opskriv dit øvelse<br>
+                        og hjælp andre med at finde den nemme og hurtige måde<br>
+                        at genoptage energi og føle frisk og fuld af power</h1>
 
       <form class="contact" method="post" action="confirm.php" enctype="multipart/form-data">
 

@@ -1,7 +1,7 @@
 
 
 <?php
-    error_reporting(E_ALL);
+    //error_reporting(E_ALL);
     
     $image = $_FILES['billedfil'];
 	$powerup = $_POST['powerup'];
