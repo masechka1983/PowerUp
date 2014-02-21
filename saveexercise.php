@@ -18,7 +18,7 @@
   </script>
 
     <section class="main">
-      <h1 class="undertitle">Nyeste PowerUps øvelser</h1>
+      <h1 class="subtitle">Nyeste PowerUps øvelser</h1>
     <?php
     //Opretter DB-forbindelse
         $dblink = mysqli_connect("localhost","mod7af1489","2faumoj9","mod7af1489") or die ("Fejl: Kan ikke etablere forbindelse til databasen");

@@ -68,7 +68,7 @@
   </script>
 
     <section class="main">
-      <h1 class="undertitle">Nyeste PowerUps øvelser</h1>
+      <h1 class="subtitle">Nyeste PowerUps øvelser</h1>
       <h2>Hej <?php echo $navn; ?> </h2>
 	    <p>Tak for deltagelse i konkurrencen
 	       og sending os Jeres PowerUp øvelse.<br>
