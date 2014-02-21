@@ -1,9 +1,9 @@
 
 
 <?php
-    //error_reporting(E_ALL);
+    error_reporting(E_ALL);
     
-    $image = $_FILES['billedfil'];
+  $image = $_FILES['billedfil'];
 	$powerup = $_POST['powerup'];
 	$navn = $_POST['navn'];
 	$email = $_POST['email'];
@@ -69,6 +69,11 @@
 
     <section class="main">
       <h1 class="undertitle">Nyeste PowerUps øvelser</h1>
+      <h2>Hej <?php echo $navn; ?> </h2>
+	    <p>Tak for deltagelse i konkurrencen
+	       og sending os Jeres PowerUp øvelse.<br>
+	       Vinderen får besked fra os senest den 28. februar.</p>
+
     <?php
     //Opretter DB-forbindelse
         $dblink = mysqli_connect("localhost","mod7af1489","2faumoj9","mod7af1489") or die ("Fejl: Kan ikke etablere forbindelse til databasen");
@@ -82,37 +87,10 @@
       //Ny veriabel, $result = er der et resultatsæt i forbindelse til forespørgslen? $result er en "pointer" til "ja, der er et resultatsæt her"
 
       echo "<section>";
-      while($row = mysqli_fetch_array($result)){
+      while($exercise = mysqli_fetch_assoc($result)){
         //While løkke - så længe der er en række (row)- opbyg array
-    ?>
+        include '_exercise.php';
 
-      <article class="competition">
-        <div class="right-side"> 
-          <!-- html paragraf i hvilket der outputtes billedet-->
-          <p class="billede"><img src=<?php echo $row['imageurl']; ?> alt="foto"></p> 
-        </div>
-
-        <div class="left-side">
-          <!-- html span i hvilket der outputtes værdien fra feltet "powerupnavn"-->
-          <p class="powerupname"><?php echo $row['powerupnavn']; ?></p>
-
-          <!-- html span i hvilket der outputtes værdien fra feltet "navn"-->
-          <p class="byline">Af <?php echo $row['brugersnavn']; ?></p>
-
-          <!-- html paragraf i hvilket der outputtes instrukser-->
-          <p class="description"><?php echo $row['instrukser']; ?></p>
-
-          <div class="fb-like" 
-               data-href="http://mod7af1489.keaweb.dk/goodvertizingpowerup/index.php?id=<?php echo $row['id']; ?>" 
-               data-layout="standard" 
-               data-action="like" 
-               data-show-faces="true" 
-               data-share="true">
-          </div>
-        </div>
-      </article> 
-        
-    <?php 
        };//slutter While løkke
        mysqli_close($dblink);
     ?>

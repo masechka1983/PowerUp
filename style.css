@@ -56,9 +56,15 @@ h1 {
   color: #333;
 }   
 
-h2, p {
-	font-size: 20px;
-	font-weight: 500;
+p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+
 }
 
 #banner {
@@ -138,6 +144,10 @@ form {
 	top:1px;
 }
 
+.fb-like {
+	margin-top: 20px;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
@@ -188,7 +198,7 @@ form {
 @media screen and (min-width: 600px) {
 
 .undertitle {
-	margin-bottom: 10px;
+	margin: 20px;
 }	
 
 #competimage {
@@ -248,12 +258,13 @@ input[type="file"] {
 
 .competition {
 	margin-top: 20px;
-	height: 295px;
-	text-align: left;
+	height: 290px;
 }
 
-article {
-    border-bottom: 1px solid;
+.exercise {
+	background: url('photo/divider_up.png') center bottom no-repeat;
+	margin-top: 20px;
+	min-height: 250px; 
 }
 
 .byline {
@@ -261,22 +272,28 @@ article {
 	font-size: 18px;
 }
 
-.billede img {
-	width: 370px;
+.image-wrapper {
+	overflow: hidden;
+	height: 230px;
+}
+
+.image-wrapper img {
+	width: 100%;
+	height: auto;
 	margin-left: 10px;
 }
 
-.left-side {
+.right-side {
 	display: inline-block;
 	width: 400px;
 	float: right;
 	text-align: left;
 }
 
-.right-side {
+.left-side {
 	display: inline-block;
 	width: 370px;
-	height: 265px;
+	margin-right: 25px;
 }
 
 .description {
