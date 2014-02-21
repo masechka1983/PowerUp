@@ -46,25 +46,20 @@
 body {
   font: 16px "Avenir", "Helvetica";
   color: #333;
-  text-align: center;
-}  
-
-h1 {
-  font-size: 25px;
   font-weight: 500;
-  text-align: center;
-  color: #333;
-}   
+}
 
 p {
   font-size: 20px;
-  font-weight: 500;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
 }
 
 h2 {
   font-size: 22px;
-  font-weight: 500;
-
 }
 
 #banner {
@@ -107,7 +102,7 @@ form {
 	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	
+
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #248796));
 	background:-moz-linear-gradient(top, #599bb3 5%, #248796 100%);
 	background:-webkit-linear-gradient(top, #599bb3 5%, #248796 100%);
@@ -156,50 +151,14 @@ form {
     line-height: 0;
     height: 0;
 }
- 
+
 .clearfix {
     display: inline-block;
 }
 
-/*@media screen and (max-width: 1440px) {
-.main {
-	width: 100%;
-	margin-top: 20px;
-}
-
-.right-side {
-	margin-left: 24%;
-	display: inline-block;
-	width: 370px;
-	height: 297px;
-}	
-
-.left-side {
-	display: inline-block;
-	width: 400px;
-	float: right;
-	text-align: left;
-	margin-right: 285px;
-}
-}
-/*.exercise {
-	margin-top: 20px;
-	height: 295px;
-	text-align: left;
-}
-
-.byline {
-	font-weight: 500;
-	font-size: 18px;
-}*/
-
-
-
-@media screen and (min-width: 600px) {
-
 .undertitle {
 	margin: 20px;
-}	
+}
 
 #competimage {
 	width: 44%;
@@ -210,14 +169,14 @@ form {
 input[type="file"] {
 	padding: 5px 0;
 	font: 12px "Avenir", "Helvetica";
-}	
+}
 
 .fbbutton {
 	margin-bottom: 15px;
 	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-	
+
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #248796));
 	background:-moz-linear-gradient(top, #599bb3 5%, #248796 100%);
 	background:-webkit-linear-gradient(top, #599bb3 5%, #248796 100%);
@@ -263,8 +222,10 @@ input[type="file"] {
 
 .exercise {
 	background: url('photo/divider_up.png') center bottom no-repeat;
-	margin-top: 20px;
-	min-height: 250px; 
+	min-height: 250px;
+	padding: 20px 0;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .byline {
@@ -274,7 +235,9 @@ input[type="file"] {
 
 .image-wrapper {
 	overflow: hidden;
-	height: 230px;
+	height: 250px;
+	width: 400px;
+	float: left;
 }
 
 .image-wrapper img {
@@ -284,22 +247,12 @@ input[type="file"] {
 }
 
 .right-side {
-	display: inline-block;
-	width: 400px;
-	float: right;
-	text-align: left;
-}
-
-.left-side {
-	display: inline-block;
-	width: 370px;
-	margin-right: 25px;
+  padding: 0 15px;
+	width: 50%;
+	margin-left: 50%;
 }
 
 .description {
-	width: 400px;
-	display: inline-block;
 	font-weight: 200;
 	font-size: 18px;
-}
 }
