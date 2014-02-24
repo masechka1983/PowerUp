@@ -2,7 +2,7 @@
 
 <?php
     error_reporting(E_ALL);
-    
+
   $image = $_FILES['billedfil'];
 	$powerup = $_POST['powerup'];
 	$navn = $_POST['navn'];
@@ -14,7 +14,7 @@
 	mysqli_set_charset($dblink, "utf8");
 
 //Herefter håndteres uploadet til konkurrencen
-//vi har ikke uploadet fil endnu - så resultatet er false	
+//vi har ikke uploadet fil endnu - så resultatet er false
 	$uploaded = false;
 
 //checker den modtagne fils type - hvis jpeg elle png- fortsæt
@@ -32,11 +32,11 @@
 		$klar_til_indsaet = move_uploaded_file($tmp_navn, $imageurl);
 
 		if($klar_til_indsaet){
-			//Først SQL-forespørslen- hent alt fra din tabel 
+			//Først SQL-forespørslen- hent alt fra din tabel
 			$insertexercisequery = "INSERT INTO goodvertizingkonkurrencedeltagere VALUES ('', '$imageurl', '$powerup', '$navn', '$email', '$instrukser')";
 //Udfør dernæst overstående SQL-sætning
 			$result = mysqli_query($dblink, $insertexercisequery) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
-			if($result) { 
+			if($result) {
 
 				$uploaded = true;
 				//echo "<meta HTTP-EQUIV="REFRESH" content='0; url=http://mod7af1489.keaweb.dk/goodvertizingpowerup/saveexercise.php'>";
@@ -44,8 +44,8 @@
 
 				 }
 		}
-	}		
-			
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -69,10 +69,14 @@
 
     <section class="main">
       <h1 class="subtitle">Nyeste PowerUps øvelser</h1>
-      <h2>Hej <?php echo $navn; ?> </h2>
-	    <p>Tak for deltagelse i konkurrencen
-	       og sending os Jeres PowerUp øvelse.<br>
-	       Vinderen får besked fra os senest den 28. februar.</p>
+      <div class="centered">
+        <h2>Hej <?php echo $navn; ?> </h2>
+    	    <p>
+          Tak for deltagelse i konkurrencen
+          og sending os Jeres PowerUp øvelse.<br>
+          Vinderen får besked fra os senest den 28. februar.
+        </p>
+      </div>
 
     <?php
     //Opretter DB-forbindelse
@@ -81,7 +85,7 @@
         mysqli_set_charset($dblink, "utf8");
 
       //Først SQL-forespørgslen- hent alt fra din tabel
-      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere ORDER BY id DESC";  
+      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere ORDER BY id DESC";
 
       $result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
       //Ny veriabel, $result = er der et resultatsæt i forbindelse til forespørgslen? $result er en "pointer" til "ja, der er et resultatsæt her"
