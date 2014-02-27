@@ -5,7 +5,7 @@
 
   $slutaar = '2014';
   $slutmaaned = '02';
-  $slutdag = '28';
+  $slutdag = '29';
 
   $konkurrencestatus = true;
 
