@@ -5,7 +5,7 @@
 
   $slutaar = '2014';
   $slutmaaned = '02';
-  $slutdag = '28';
+  $slutdag = '11';
 
   $konkurrencestatus = true;
 
@@ -49,19 +49,17 @@
    if($konkurrencestatus){
     ?>
     <section class="competition">
-      <h1 class="title">Opskriv dit øvelse<br>
-                        og hjælp andre med at finde den nemme og hurtige måde<br>
-                        at genoptage energi og føle frisk og fuld af power</h1>
+      <h1 class="title">Opskriv dit øvelse</h1>
 
-      <form class="contact" method="post" action="confirm.php" enctype="multipart/form-data">
+      <form class="contact" method="post" action="resultat.php">
 
         <div id="competimage">
           <input type="file" name="billedfil" id="billedfil">
         </div>
 
         <div id="compeform">
-          <button class="fbbutton" type="button" onclick="hentnavn()" >
-            Hent deltageroplysninger fra facebook</button><br>
+          <button type="button" onclick="hentnavn()" >
+            Hent deltageroplysninger fra facebook</button>
 
           <label for="powerup">PowerUp:<br></label>
           <input class="contact-field" type="text" id="powerup" name="powerup" /><br>
@@ -75,13 +73,11 @@
           <label for="message">Instrukser:<br></label>
           <textarea class="contact-field" id="instrukser" name="instrukser" rows="20"></textarea><br>
 
-          <input class="myButton" type="submit" name="submit" value="Send" />
+          <input type="submit" class="myButton" name="submit" value="Send" />
           <span class="clearfix"></span>
         </div>
       </form>
     </section>
-
-    <a href="confirm.php">Direkte til PowerUps</a>
   
     <?php
     }      
@@ -96,7 +92,7 @@
         mysqli_set_charset($dblink, "utf8");
 
       //Først SQL-forespørgslen- hent alt fra din tabel
-      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere WHERE id in (1, 2, 3, 4, 5)"; 
+      $query = "SELECT * FROM goodvertizingkonkurrencedeltagere ORDER BY id DESC"; 
       //Har ændret i $query de sidste 4 ord!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 
       $result = mysqli_query($dblink, $query) or die ("Førespørgslen kunne ikke udføres: " . mysqli_error($dblink));
@@ -139,7 +135,6 @@
       })  // end getLoginStatus 
     } // end hentnavn      
 </script>
-
 
   
   
