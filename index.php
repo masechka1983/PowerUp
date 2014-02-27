@@ -80,8 +80,6 @@
         </div>
       </form>
     </section>
-
-    <a href="confirm.php">Direkte til PowerUps</a>
   
     <?php
     }      
